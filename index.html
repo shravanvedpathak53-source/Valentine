@@ -75,6 +75,7 @@
             margin-top: 10px;
         }
 
+        /* Celebration Animation */
         .heart {
             position: absolute;
             top: -10%;
@@ -108,7 +109,6 @@
         function moveNo() {
             const noBtn = document.getElementById('noBtn');
             noBtn.style.position = 'absolute';
-            // Keeps the button within the visible screen area
             const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
             const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
             noBtn.style.left = x + 'px';
