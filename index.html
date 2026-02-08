@@ -59,7 +59,12 @@
         }
 
         #yesBtn { background-color: #ff4d6d; color: white; }
-        #noBtn { background-color: #fb6f92; color: white; position: relative; }
+        #noBtn { 
+            background-color: #fb6f92; 
+            color: white; 
+            position: relative; 
+            transition: 0.1s ease;
+        }
 
         .hidden { display: none; }
 
@@ -70,7 +75,6 @@
             margin-top: 10px;
         }
 
-        /* Celebration Animation */
         .heart {
             position: absolute;
             top: -10%;
@@ -87,7 +91,7 @@
 <body>
 
     <div class="card" id="askContainer">
-        <img src="D:\Valentine\valentines-main\IMG_2295.jpeg" alt="Cute Cat" class="main-img">
+        <img src="IMG_2295.jpeg" alt="Cute Cat" class="main-img">
         <h1>Will you be my Valentine, love? 🌹</h1>
         <div class="btn-container">
             <button id="yesBtn" onclick="showLove()">YES!</button>
@@ -96,7 +100,7 @@
     </div>
 
     <div class="card hidden" id="successContainer">
-        <img src="D:\Valentine\valentines-main\IMG_2299.jpeg" alt="Happy Cat" class="main-img">
+        <img src="IMG_2299.jpeg" alt="Happy Cat" class="main-img">
         <div id="success-msg">Yay! I love you so much mwah! 💋❤️</div>
     </div>
 
@@ -104,6 +108,7 @@
         function moveNo() {
             const noBtn = document.getElementById('noBtn');
             noBtn.style.position = 'absolute';
+            // Keeps the button within the visible screen area
             const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
             const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
             noBtn.style.left = x + 'px';
@@ -131,5 +136,4 @@
         }
     </script>
 </body>
-
 </html>
